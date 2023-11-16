@@ -80,7 +80,7 @@ def retrieve_password(data, loc, cipher):
             if data in [username, website]:
                 print(f"Username: {username}, Password: {decrypted_password}, Website: {website}")
 
-# Add a password witgout generating
+# Add a password without generating
 def add_password(u, p, w, loc, cipher):
     loc = os.path.join(loc, ".Passwords.txt")
     encrypted_password = cipher.encrypt(p.encode()).decode()
@@ -103,7 +103,7 @@ if check_master_password(password, file_location, cipher):
     try:
         choice = ""
         while True:
-            choice = input("Do you want to add a password, Generate or Retrieve? (Use G, A or R) ").lower()
+            choice = input("Do you want to Generate, add a password or Retrieve? (Use G, A or R) ").lower()
             if choice == "g":
                 pass_length = int(input("What length of password do you need? "))
                 website = input("What website or App is this for? ")
